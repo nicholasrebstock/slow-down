@@ -14,9 +14,6 @@ function getUrlVars() {
     let end = parts.indexOf("redirect=");
     let time = parts.slice(interval[0] + 5, interval[1])
     let myurl = parts.slice(end + 9);
-    console.log(typeof myurl)
-    console.log(time)
-    console.log(myurl);
     return [myurl, time]
 }
 
@@ -24,6 +21,5 @@ function getUrlVars() {
 let deets = getUrlVars();
 let originalurl = deets[0]
 let time = parseInt(deets[1], 10)
-console.log(originalurl);
 my_timer(time, originalurl);
 
